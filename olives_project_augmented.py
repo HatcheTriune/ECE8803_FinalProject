@@ -128,7 +128,7 @@ def train_one_fold(model, train_loader, val_loader, fold=0, device="cuda", num_e
         else:
             patience_counter += 1
         if patience_counter >= 5:
-            print("⏹️ Early stopped")
+            print(" Early stopped")
             break
     return best_val_loss
 

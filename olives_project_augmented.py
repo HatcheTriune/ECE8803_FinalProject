@@ -127,9 +127,7 @@ def train_one_fold(model, train_loader, val_loader, fold=0, device="cuda", num_e
             patience_counter = 0
         else:
             patience_counter += 1
-        if patience_counter >= 5:
-            print(" Early stopped")
-            break
+        
     return best_val_loss
 
 def evaluate_on_test(model, test_loader, device="cuda"):
@@ -152,9 +150,9 @@ def evaluate_on_test(model, test_loader, device="cuda"):
     print(f" Test F1 Score (macro): {f1_score(all_labels, all_preds, average='macro'):.4f}")
 
 if __name__ == "__main__":
-    sample_sizes = [50000]
+    sample_sizes = [75000]
     for sample_size in sample_sizes:
         train_loader, val_loader, test_loader, _ = prepare_data_simple(sample_size=sample_size)
         model = MultimodalNet()
-        train_one_fold(model, train_loader, val_loader, fold=0, num_epochs=30)
+        train_one_fold(model, train_loader, val_loader, fold=0, num_epochs=40)
         evaluate_on_test(model, test_loader)

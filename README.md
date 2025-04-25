@@ -1,5 +1,5 @@
 # ECE8803: Fund of Machine Learning Group Project
-RETINAL BIOMARKER DETECTION USING MULTIMODAL DEEP LEARNING ON THE OLIVES DATASET
+RETINAL BIOMARKER DETECTION USING MULTIMODAL DEEP LEARNING ON THE OLIVES DATASET\
 This project addresses a multi-label classification task using the [OLIVES Dataset](https://huggingface.co/datasets/gOLIVES/OLIVES_Dataset). Aiming to develop an effective multimodal approach to detecting biomarkers in retinal OCT images by combining image data with clinical measurements and examining how combining image features with clinical metrics enhances detection accuracy across different biomarkers.
 
 ## Dependencies
